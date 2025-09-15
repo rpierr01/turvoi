@@ -15,7 +15,7 @@ cache = Cache(app.server, config={
 })
 app.server.config["APP_CACHE"] = cache
 
-# Barre de navigation et container pages
+# Barre de navigation et container pages n
 app.layout = html.Div([
     dbc.Navbar(
         dbc.Container([
