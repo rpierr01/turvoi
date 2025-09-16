@@ -1,13 +1,16 @@
-import io, json
+import io
+import json
+import pandas as pd
 import dash
 from dash import html, dcc, Input, Output
 import dash_bootstrap_components as dbc
 import plotly.express as px
-from services.stats import dataset_progress, by_annotator_counts, iaa_summary
-from services.annotation_io import load_annotations, IMAGES_DIR
-from services.export_coco import to_coco
 
-# Page stats + export
+# ---- CONFIG ----
+ANNOTATIONS_FILE = "./data/annotations.csv"
+IMAGES_DIR = "./data/cars_detection"
+
+# ---- PAGE DASH ----
 dash.register_page(__name__, path="/stats", name="Stats & Export")
 
 layout = dbc.Container([
@@ -39,45 +42,25 @@ layout = dbc.Container([
 ], fluid=True)
 
 def register_callbacks(app):
-    @app.callback(Output("progress-fig", "figure"), Input("url", "pathname"))
-    def _progress(_):
-        imgs, completed = dataset_progress()
-        fig = px.bar(x=imgs, y=completed, labels={"x": "image", "y": "#enregistrements"})
-        fig.update_layout(xaxis_tickangle=-45)
-        return fig
+    from dash import ctx
+    from services.export_coco import to_coco
 
-    @app.callback(Output("by-ann-fig", "figure"), Input("url", "pathname"))
-    def _by_ann(_):
-        counts = by_annotator_counts()
-        fig = px.bar(x=counts.index, y=counts.values, labels={"x": "annotateur", "y": "#enregistrements"})
-        return fig
+    @app.callback(
+        Output("dl-coco", "data"),
+        Output("export-msg", "children"),
+        Input("export-coco", "n_clicks"),
+        prevent_initial_call=True
+    )
+    def export_coco(n_clicks):
+        if not n_clicks:
+            return dash.no_update, ""
+        try:
+            df = pd.read_csv(ANNOTATIONS_FILE)
+            coco = to_coco(df, IMAGES_DIR)
+            buffer = io.StringIO()
+            json.dump(coco, buffer, ensure_ascii=False, indent=2)
+            buffer.seek(0)
+            return dcc.send_string(buffer.getvalue(), "annotations_coco.json"), "Export réussi."
+        except Exception as e:
+            return None, f"Erreur export: {e}"
 
-    @app.callback(Output("iaa-fig", "figure"), Output("conflict-list", "children"), Input("iou-thr", "value"))
-    def _iaa(thr):
-        summary = iaa_summary(iou_threshold=float(thr))
-        per = summary["per_image"]
-        items = [html.Li(f"{img} — IoU={v['mean_iou']:.2f}") for img, v in per.items()
-                 if v["mean_iou"] is not None and v["flag"]]
-        txt = html.Div([
-            html.Strong("Images à conflit (< seuil) :"),
-            html.Ul(items or [html.Li("Aucun conflit")])
-        ])
-        xs, ys = [], []
-        for img, v in per.items():
-            if v["mean_iou"] is not None:
-                xs.append(img); ys.append(v["mean_iou"])
-        fig = px.scatter(x=xs, y=ys, labels={"x":"image","y":"IoU moyen"})
-        fig.update_layout(title="IoU moyen par image (paires d’annotateurs)")
-        return fig, txt
-
-    @app.callback(Output("dl-coco", "data"), Output("export-msg", "children"),
-                  Input("export-coco", "n_clicks"), prevent_initial_call=True)
-    def _export(_):
-        df = load_annotations()
-        if df.empty:
-            return None, "Aucune annotation à exporter"
-        coco = to_coco(df, IMAGES_DIR)
-        buf = io.StringIO()
-        json.dump(coco, buf)
-        data = dict(content=buf.getvalue(), filename="annotations_cars_coco.json")
-        return data, "✅ Export généré"

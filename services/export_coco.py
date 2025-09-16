@@ -11,16 +11,26 @@ def to_coco(df: pd.DataFrame, images_dir: str) -> Dict:
     files = sorted(df["image"].dropna().unique().tolist())
     for i, fname in enumerate(files, start=1):
         image_id_map[fname] = i
-        try:
-            from PIL import Image
-            w, h = Image.open(os.path.join(images_dir, fname)).size
-        except Exception:
-            w, h = None, None
+        img_path = os.path.join(images_dir, fname)
+        if os.path.isfile(img_path):
+            try:
+                from PIL import Image
+                w, h = Image.open(img_path).size
+            except Exception:
+                w, h = 0, 0
+        else:
+            w, h = 0, 0
         images.append({"id": i, "file_name": fname, "width": w, "height": h})
 
     for _, row in df.iterrows():
         img = row["image"]
         data = json.loads(row["boxes_json"]) or {}
+        # Handle double-encoded JSON or string type
+        if isinstance(data, str):
+            try:
+                data = json.loads(data)
+            except Exception:
+                data = {}
         for s in data.get("objects", []):
             if s.get("type") != "rect":
                 continue
