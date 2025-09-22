@@ -31,7 +31,13 @@ layout = dbc.Container([
 
         dbc.Col(dbc.Card([
             html.H5("Annotateur"),
-            dcc.Input(id="annotator-name", placeholder="Votre nom", type="text", debounce=True, className="mb-2"),
+            dcc.Input(
+                id="annotator-name",
+                placeholder="Votre nom",
+                type="text",
+                debounce=True,
+                className="mb-2"
+            ),
             html.Div(id="whoami", className="muted"),
             html.Hr(),
             html.Div(id="image-info", className="muted"),
@@ -39,7 +45,7 @@ layout = dbc.Container([
                 dbc.Button("◀ Précédent", id="prev-image", color="secondary", className="me-2"),
                 dbc.Button("Suivant ▶", id="next-image", color="secondary"),
             ], className="mt-2"),
-            dbc.Button("💾 Sauvegarder (S)", id="save-annotation", color="success", className="mt-3"),
+            dbc.Button("💾 Sauvegarder", id="save-annotation", color="success", className="mt-3"),
             html.Div(id="save-status", className="mt-2")
         ], className="card"), md=4)
     ])

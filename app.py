@@ -7,7 +7,7 @@ from flask_caching import Cache
 
 app = Dash(__name__, use_pages=True,
            external_stylesheets=[dbc.themes.FLATLY],
-           title="Car Annotation App")
+           title="Appli d'annotation pour modèle")
 server = app.server
 
 cache = Cache(app.server, config={
@@ -26,7 +26,7 @@ nav_links = [
 app.layout = html.Div([
     dbc.Navbar(
         dbc.Container([
-            dbc.NavbarBrand("🚗 Car Annotation App", className="navbar-brand"),
+            dbc.NavbarBrand("🚗 Appli d'annotation pour modèle", className="navbar-brand"),
             dbc.Nav(nav_links, className="ms-auto"),
         ]), color="primary", dark=True
     ),
@@ -37,6 +37,7 @@ app.layout = html.Div([
 from pages import annotate as pg_annotate, review as pg_review, stats as pg_stats
 pg_annotate.register_callbacks(app)
 pg_review.register_callbacks(app)
+pg_stats.register_callbacks(app)
 
 if __name__ == "__main__":
     app.run(debug=False)
