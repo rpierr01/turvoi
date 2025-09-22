@@ -37,7 +37,6 @@ app.layout = html.Div([
 from pages import annotate as pg_annotate, review as pg_review, stats as pg_stats
 pg_annotate.register_callbacks(app)
 pg_review.register_callbacks(app)
-pg_stats.register_callbacks(app)
 
 if __name__ == "__main__":
     app.run(debug=False)
