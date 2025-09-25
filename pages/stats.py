@@ -1,4 +1,3 @@
-
 import os, json, io, zipfile          # opérations fichiers, JSON, mémoire, zip
 import dash                           # framework Dash
 from dash import html, dcc, Output, Input
@@ -40,11 +39,14 @@ def count_objects(boxes_json):
     objs = data.get("objects", [])
     count = 0
     for o in objs:
-        # si c'est un "path" et qu'il contient la clé "path", compter chaque élément de la liste
-        if o.get("type") == "path" and "path" in o:
-            count += len(o["path"])
-        else:
+        # Vérifier que l'objet est visible et a un type valide
+        if not o.get("visible", True):
+            continue
+        obj_type = o.get("type")
+        if obj_type in {"rect", "circle", "image"}:
             count += 1
+        elif obj_type == "path" and "path" in o:
+            count += len(o["path"])  # Compter chaque sous-chemin
     return count
 
 # --- Graphique : nombre d’annotations par image ---
