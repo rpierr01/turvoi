@@ -35,9 +35,11 @@ app.layout = html.Div([
 
 # Raccorde les callbacks
 from pages import annotate as pg_annotate, review as pg_review, stats as pg_stats
+from pages import leFutur as pg_lefutur
 pg_annotate.register_callbacks(app)
 pg_review.register_callbacks(app)
 pg_stats.register_callbacks(app)
+pg_lefutur.register_callbacks(app)
 
 if __name__ == "__main__":
     app.run(debug=False)
