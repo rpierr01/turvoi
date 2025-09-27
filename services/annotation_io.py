@@ -7,7 +7,7 @@ DATA_DIR = "data"
 IMAGES_DIR = os.path.join(DATA_DIR, "cars_detection")
 ANN_PATH = os.path.join(DATA_DIR, "annotations.csv")
 
-COLUMNS = ["image", "annotator", "timestamp", "boxes_json"]
+COLUMNS = ["id", "image", "annotator", "timestamp", "boxes_json"]
 
 def ensure_dirs():
     os.makedirs(IMAGES_DIR, exist_ok=True)
@@ -32,13 +32,23 @@ def _read_df():
 def save_annotation(image: str, annotator: str, boxes_json: dict):
     """Append une annotation (json dash-canvas) dans le CSV."""
     df = _read_df()
+    # Génère l'identifiant unique (auto-incrémental)
+    if "id" in df.columns and not df.empty:
+        next_id = int(df["id"].max()) + 1
+    else:
+        next_id = 1
     row = {
+        "id": next_id,
         "image": image,
         "annotator": annotator,
         "timestamp": datetime.utcnow().isoformat(),
         "boxes_json": json.dumps(boxes_json or {})
     }
     df = pd.concat([df, pd.DataFrame([row])], ignore_index=True)
+    df.to_csv(ANN_PATH, index=False)
+
+def save_annotations(df: pd.DataFrame):
+    """Écrase le CSV des annotations avec le DataFrame fourni."""
     df.to_csv(ANN_PATH, index=False)
 
 def load_annotations(image: str = None, annotator: str = None):

@@ -104,7 +104,8 @@ def table_unannotated():
 def generate_coco():
     """Génère un JSON COCO ; chaque entrée 'images' contient toutes les colonnes du CSV (boxes_json incluse)."""
     try:
-        df = pd.read_csv("/Users/remipierron/Desktop/🌍 InterMac/vcod/dash3/turvoi/data/annotations.csv")
+        # Charge le CSV mis à jour avec la colonne 'id'
+        df = load_annotations()
         images = []
         annotations = []
         ann_id = 1
