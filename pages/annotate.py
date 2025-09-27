@@ -21,6 +21,7 @@ layout = dbc.Container([
     dcc.Store(id="image-list"),
     dcc.Store(id="current-index", data=0),
     dcc.Store(id="annotator-store", storage_type="local"),
+    dcc.Store(id="global-store"),  # Ajout du composant manquant
 
     dbc.Row([
         dbc.Col(dbc.Card([
