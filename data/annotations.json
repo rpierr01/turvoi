@@ -1,0 +1,727 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "created": "2025-09-24T13:48:25.730107",
+    "last_updated": "2025-09-27T15:06:55.038817",
+    "next_id": 22
+  },
+  "annotations": [
+    {
+      "id": 1,
+      "image": "car425.jpg",
+      "annotator": "test_user",
+      "timestamp": "2025-09-25T18:40:14.690899",
+      "rectangles": [
+        {
+          "x": 100,
+          "y": 100,
+          "width": 50,
+          "height": 30,
+          "color": "#FF0000"
+        },
+        {
+          "x": 79,
+          "y": 121,
+          "width": 161,
+          "height": 127,
+          "color": "#FF0000"
+        },
+        {
+          "x": 67,
+          "y": 113,
+          "width": 258,
+          "height": 118,
+          "color": "#FF0000"
+        },
+        {
+          "x": 78,
+          "y": 105,
+          "width": 247,
+          "height": 126,
+          "color": "#FF0000"
+        },
+        {
+          "x": 45,
+          "y": 64,
+          "width": 309,
+          "height": 268,
+          "color": "#FF0000"
+        },
+        {
+          "x": 45,
+          "y": 64,
+          "width": 309,
+          "height": 268,
+          "color": "#FF0000"
+        }
+      ],
+      "last_updated": "2025-09-27T11:28:32.989813",
+      "modification_history": [
+        {
+          "modifier_name": "jjj",
+          "timestamp": "2025-09-25T22:50:50.875608",
+          "rectangles_added": 2,
+          "total_rectangles_after": 4,
+          "action": "ajout"
+        },
+        {
+          "modifier_name": "test55",
+          "timestamp": "2025-09-27T11:28:18.973899",
+          "rectangles_added": 1,
+          "total_rectangles_after": 5,
+          "action": "ajout"
+        },
+        {
+          "modifier_name": "test55",
+          "timestamp": "2025-09-27T11:28:32.989824",
+          "rectangles_added": 1,
+          "total_rectangles_after": 6,
+          "action": "ajout"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "image": "test.jpg",
+      "annotator": "demo",
+      "timestamp": "2025-09-24T13:54:37.841478",
+      "rectangles": [
+        {
+          "x": 100,
+          "y": 50,
+          "width": 200,
+          "height": 150,
+          "color": "#FF8000"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "image": "car425.jpg",
+      "annotator": "demo",
+      "timestamp": "2025-09-24T13:58:02.796540",
+      "rectangles": [
+        {
+          "x": 100,
+          "y": 50,
+          "width": 200,
+          "height": 150,
+          "color": "#FF8000"
+        },
+        {
+          "x": 300,
+          "y": 200,
+          "width": 100,
+          "height": 80,
+          "color": "#FF8000"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "image": "car426.jpg",
+      "annotator": "leslie",
+      "timestamp": "2025-09-25T18:41:33.320937",
+      "rectangles": [
+        {
+          "x": 50,
+          "y": 100,
+          "width": 150,
+          "height": 120,
+          "color": "#00FF00"
+        },
+        {
+          "x": 74,
+          "y": 83,
+          "width": 177,
+          "height": 219,
+          "color": "#00FF00"
+        },
+        {
+          "x": 48,
+          "y": 19,
+          "width": 186,
+          "height": 214,
+          "color": "#00FF00"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "image": "car425.jpg",
+      "annotator": "remi",
+      "timestamp": "2025-09-24T13:58:02.801557",
+      "rectangles": [
+        {
+          "x": 400,
+          "y": 300,
+          "width": 80,
+          "height": 60,
+          "color": "#FF0000"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "image": "car428.jpg",
+      "annotator": "leslie",
+      "timestamp": "2025-09-25T22:30:03.903629",
+      "rectangles": [
+        {
+          "x": 70.28,
+          "y": 179.29,
+          "width": 332,
+          "height": 155,
+          "color": "#00FF00"
+        },
+        {
+          "x": 28,
+          "y": 76,
+          "width": 245,
+          "height": 169,
+          "color": "#00FF00"
+        },
+        {
+          "x": 20,
+          "y": 82,
+          "width": 253,
+          "height": 163,
+          "color": "#00FF00"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "image": "car428.jpg",
+      "annotator": "leslie",
+      "timestamp": "2025-09-24T14:21:25.355057",
+      "rectangles": [
+        {
+          "x": 70.28,
+          "y": 179.29,
+          "width": 332,
+          "height": 155,
+          "color": "#00FF00"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "image": "car428.jpg",
+      "annotator": "leslie",
+      "timestamp": "2025-09-24T14:21:25.611196",
+      "rectangles": [
+        {
+          "x": 70.28,
+          "y": 179.29,
+          "width": 332,
+          "height": 155,
+          "color": "#00FF00"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "image": "car429.jpg",
+      "annotator": "remi",
+      "timestamp": "2025-09-24T14:24:32.049730",
+      "rectangles": [
+        {
+          "x": 200.28,
+          "y": 347.29,
+          "width": 6,
+          "height": 8,
+          "color": "#FF0000"
+        },
+        {
+          "x": 170.28,
+          "y": 184.29,
+          "width": 17,
+          "height": 11,
+          "color": "#FF0000"
+        },
+        {
+          "x": 14.72,
+          "y": 101.29,
+          "width": 468,
+          "height": 343,
+          "color": "#FF0000"
+        },
+        {
+          "x": 74.28,
+          "y": 135.29,
+          "width": 481,
+          "height": 312,
+          "color": "#FF0000"
+        },
+        {
+          "x": 144.28,
+          "y": 166.29,
+          "width": 638,
+          "height": 288,
+          "color": "#FF0000"
+        },
+        {
+          "x": 190.28,
+          "y": 238.29,
+          "width": 317,
+          "height": 155,
+          "color": "#FF0000"
+        },
+        {
+          "x": 616.28,
+          "y": 55.29,
+          "width": 241,
+          "height": 217,
+          "color": "#FF0000"
+        },
+        {
+          "x": 47.28,
+          "y": 247.29,
+          "width": 613,
+          "height": 207,
+          "color": "#FF0000"
+        },
+        {
+          "x": 249.28,
+          "y": 81.29,
+          "width": 264,
+          "height": 282,
+          "color": "#FF0000"
+        },
+        {
+          "x": 323.28,
+          "y": 211.29,
+          "width": 210,
+          "height": 159,
+          "color": "#FF0000"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "image": "car425.jpg",
+      "annotator": "leslie",
+      "timestamp": "2025-09-24T15:04:00.128449",
+      "rectangles": [
+        {
+          "x": 82.28,
+          "y": 169.29,
+          "width": 363,
+          "height": 246,
+          "color": "#00FF00"
+        },
+        {
+          "x": 59.28,
+          "y": 141.29,
+          "width": 354,
+          "height": 227,
+          "color": "#00FF00"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "image": "car425.jpg",
+      "annotator": "remi",
+      "timestamp": "2025-09-24T15:04:44.934085",
+      "rectangles": [
+        {
+          "x": 44.28,
+          "y": 184.29,
+          "width": 270,
+          "height": 111,
+          "color": "#FF0000"
+        },
+        {
+          "x": 44.28,
+          "y": 173.29,
+          "width": 270,
+          "height": 122,
+          "color": "#FF0000"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "image": "car426.jpg",
+      "annotator": "demo",
+      "timestamp": "2025-09-25T15:37:26.488351",
+      "rectangles": [
+        {
+          "x": 75,
+          "y": 132,
+          "width": 221,
+          "height": 205,
+          "color": "#FF8000"
+        },
+        {
+          "x": 25,
+          "y": 174,
+          "width": 232,
+          "height": 228,
+          "color": "#FF8000"
+        },
+        {
+          "x": 318,
+          "y": 289,
+          "width": 0,
+          "height": 0,
+          "color": "#FF8000"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "image": "car426.jpg",
+      "annotator": "remi",
+      "timestamp": "2025-09-25T15:55:27.245670",
+      "rectangles": [
+        {
+          "x": 55,
+          "y": 81,
+          "width": 393,
+          "height": 145,
+          "color": "#FF0000"
+        },
+        {
+          "x": 54,
+          "y": 67,
+          "width": 380,
+          "height": 121,
+          "color": "#FF0000"
+        },
+        {
+          "x": 151,
+          "y": 115,
+          "width": 292,
+          "height": 157,
+          "color": "#FF0000"
+        },
+        {
+          "x": 147,
+          "y": 129,
+          "width": 134,
+          "height": 220,
+          "color": "#FF0000"
+        },
+        {
+          "x": 116,
+          "y": 152,
+          "width": 304,
+          "height": 162,
+          "color": "#FF0000"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "image": "car425.jpg",
+      "annotator": "hh",
+      "timestamp": "2025-09-25T16:14:16.137114",
+      "rectangles": [
+        {
+          "x": 49,
+          "y": 173,
+          "width": 365,
+          "height": 216,
+          "color": "#FF0000"
+        },
+        {
+          "x": 66,
+          "y": 173,
+          "width": 348,
+          "height": 234,
+          "color": "#FF0000"
+        },
+        {
+          "x": 92,
+          "y": 381,
+          "width": 0,
+          "height": 1,
+          "color": "#FF0000"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "image": "car425.jpg",
+      "annotator": "Leslie",
+      "timestamp": "2025-09-25T17:45:21.040133",
+      "rectangles": [
+        {
+          "x": 37,
+          "y": 60,
+          "width": 269,
+          "height": 119,
+          "color": "#00FF00"
+        },
+        {
+          "x": 25,
+          "y": 55,
+          "width": 281,
+          "height": 124,
+          "color": "#00FF00"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "image": "car425.jpg",
+      "annotator": "Test",
+      "timestamp": "2025-09-25T18:19:27.124900",
+      "rectangles": [
+        {
+          "x": 47,
+          "y": 60,
+          "width": 167,
+          "height": 103,
+          "color": "#8000FF"
+        },
+        {
+          "x": 14,
+          "y": 55,
+          "width": 202,
+          "height": 108,
+          "color": "#8000FF"
+        },
+        {
+          "x": 108,
+          "y": 203,
+          "width": 13,
+          "height": 6,
+          "color": "#8000FF"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "image": "car429.jpg",
+      "annotator": "test",
+      "timestamp": "2025-09-25T18:20:21.683219",
+      "rectangles": [
+        {
+          "x": 28,
+          "y": 42,
+          "width": 125,
+          "height": 91,
+          "color": "#8000FF"
+        },
+        {
+          "x": 35,
+          "y": 45,
+          "width": 118,
+          "height": 88,
+          "color": "#8000FF"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "image": "car425.jpg",
+      "annotator": "rem",
+      "timestamp": "2025-09-27T13:57:46.625815",
+      "rectangles": [
+        {
+          "x": 100,
+          "y": 100,
+          "width": 50,
+          "height": 30,
+          "color": "#FF0000"
+        },
+        {
+          "x": 79,
+          "y": 121,
+          "width": 161,
+          "height": 127,
+          "color": "#FF0000"
+        },
+        {
+          "x": 67,
+          "y": 113,
+          "width": 258,
+          "height": 118,
+          "color": "#FF0000"
+        },
+        {
+          "x": 78,
+          "y": 105,
+          "width": 247,
+          "height": 126,
+          "color": "#FF0000"
+        },
+        {
+          "x": 45,
+          "y": 64,
+          "width": 309,
+          "height": 268,
+          "color": "#FF0000"
+        },
+        {
+          "x": 45,
+          "y": 64,
+          "width": 309,
+          "height": 268,
+          "color": "#FF0000"
+        },
+        {
+          "x": 100,
+          "y": 50,
+          "width": 200,
+          "height": 150,
+          "color": "#FF0000"
+        },
+        {
+          "x": 300,
+          "y": 200,
+          "width": 100,
+          "height": 80,
+          "color": "#FF0000"
+        },
+        {
+          "x": 400,
+          "y": 300,
+          "width": 80,
+          "height": 60,
+          "color": "#FF0000"
+        },
+        {
+          "x": 82.28,
+          "y": 169.29,
+          "width": 363,
+          "height": 246,
+          "color": "#FF0000"
+        },
+        {
+          "x": 59.28,
+          "y": 141.29,
+          "width": 354,
+          "height": 227,
+          "color": "#FF0000"
+        },
+        {
+          "x": 44.28,
+          "y": 184.29,
+          "width": 270,
+          "height": 111,
+          "color": "#FF0000"
+        },
+        {
+          "x": 44.28,
+          "y": 173.29,
+          "width": 270,
+          "height": 122,
+          "color": "#FF0000"
+        },
+        {
+          "x": 49,
+          "y": 173,
+          "width": 365,
+          "height": 216,
+          "color": "#FF0000"
+        },
+        {
+          "x": 66,
+          "y": 173,
+          "width": 348,
+          "height": 234,
+          "color": "#FF0000"
+        },
+        {
+          "x": 92,
+          "y": 381,
+          "width": 0,
+          "height": 1,
+          "color": "#FF0000"
+        },
+        {
+          "x": 37,
+          "y": 60,
+          "width": 269,
+          "height": 119,
+          "color": "#FF0000"
+        },
+        {
+          "x": 25,
+          "y": 55,
+          "width": 281,
+          "height": 124,
+          "color": "#FF0000"
+        },
+        {
+          "x": 47,
+          "y": 60,
+          "width": 167,
+          "height": 103,
+          "color": "#FF0000"
+        },
+        {
+          "x": 14,
+          "y": 55,
+          "width": 202,
+          "height": 108,
+          "color": "#FF0000"
+        },
+        {
+          "x": 108,
+          "y": 203,
+          "width": 13,
+          "height": 6,
+          "color": "#FF0000"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "image": "car425.jpg",
+      "annotator": "remiiiiiiii",
+      "timestamp": "2025-09-27T14:31:39.023487",
+      "rectangles": [
+        {
+          "x": 104,
+          "y": 176,
+          "width": 464,
+          "height": 377,
+          "color": "#FF0000"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "image": "car425.jpg",
+      "annotator": "remiiiiiiyyyy",
+      "timestamp": "2025-09-27T14:32:31.165764",
+      "rectangles": [
+        {
+          "x": 456,
+          "y": 70,
+          "width": 13,
+          "height": 17,
+          "color": "#FF0000"
+        },
+        {
+          "x": 51,
+          "y": 161,
+          "width": 539,
+          "height": 365,
+          "color": "#FF0000"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "image": "car425.jpg",
+      "annotator": "remito",
+      "timestamp": "2025-09-27T15:06:55.038808",
+      "rectangles": [
+        {
+          "x": 67,
+          "y": 173,
+          "width": 583,
+          "height": 356,
+          "color": "#FF0000"
+        }
+      ]
+    }
+  ]
+}

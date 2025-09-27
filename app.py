@@ -42,4 +42,4 @@ pg_stats.register_callbacks(app)
 pg_lefutur.register_callbacks(app)
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=True)
