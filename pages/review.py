@@ -4,9 +4,15 @@ from dash import html, dcc, Input, Output, State  # + State
 import dash_bootstrap_components as dbc
 import plotly.express as px
 from dash import dash_table
-from services.annotation_io import load_annotations, save_annotations, ANN_PATH
+from services.annotation_io import load_annotations
 import csv
 import os
+
+# Tentative d'import de la fonction de sauvegarde (à implémenter si absente)
+try:
+    from services.annotation_io import save_annotations
+except ImportError:
+    save_annotations = None  # Fallback: aucune persistance
 
 # Page de relecture
 dash.register_page(__name__, path="/review", name="Relecture")
@@ -137,12 +143,6 @@ def delete_csv_row(image_name, csv_filepath):
         rows = [row for row in reader if row['image'] != image_name]
 
     with open(csv_filepath, 'w', newline='', encoding='utf-8') as csvfile:
-        writer = csv.DictWriter(csvfile, fieldnames=['image', 'annotator', 'timestamp', 'boxes_json'])
-        writer.writeheader()
-        writer.writerows(rows)
-
-    # Exemple d'utilisation dans une vue ou un gestionnaire d'événements
-    # delete_csv_row('car425.jpg', '/Users/remipierron/Desktop/InterMac/work/dash8/turvoi/data/annotations.csv')
         writer = csv.DictWriter(csvfile, fieldnames=['image', 'annotator', 'timestamp', 'boxes_json'])
         writer.writeheader()
         writer.writerows(rows)
