@@ -44,4 +44,4 @@ Cette application web permet d'annoter, de visualiser et d'analyser des images d
     Annotation : Outils d'annotation d'images
     Review : Relecture et correction des annotations
     Statistiques : Visualisation des stats sur les annotations
-    Le Futur : Projets et évolutions à venir
+    Le Futur : Modèle d'IA capable de détecter les modèles de voitures et les plaques
